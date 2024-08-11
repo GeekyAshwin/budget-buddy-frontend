@@ -1,27 +1,36 @@
-<app-layout [title]="'Add Expense'" >
-  <form class="w-full">
+<app-layout [title]="'Add Expense'">
+  <form [formGroup]="form" (ngSubmit)="addExpense()" class="w-full">
     <!-- From Date Field -->
     <div class="mb-5">
-      <label for="fromDate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">From Date</label>
-      <input type="date" id="fromDate" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
+      <label for="date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Date</label>
+      <input type="date" id="date" formControlName="date" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
     </div>
 
-    <!-- To Date Field -->
+    <!-- Food and Home Utilities Field -->
     <div class="mb-5">
-      <label for="toDate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">To Date</label>
-      <input type="date" id="toDate" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
+      <label for="foodAndHomeUtilities" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Food and Home Utilities</label>
+      <input type="number" id="foodAndHomeUtilities" formControlName="foodAndHomeUtilities" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Enter expense for food and home utilities" required />
     </div>
 
-    <!-- Budget Field -->
+    <!-- Personal Expense Field -->
     <div class="mb-5">
-      <label for="budget" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Budget</label>
-      <input type="number" id="budget" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Enter your budget" required />
+      <label for="personalExpense" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Personal Expense</label>
+      <input type="number" id="personalExpense" formControlName="personalExpense" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Enter personal expenses" required />
+    </div>
+
+    <!-- Snacks Expense Field -->
+    <div class="mb-5">
+      <label for="snacksExpense" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Snacks Expense</label>
+      <input type="number" id="snacksExpense" formControlName="snacksExpense" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Enter snacks expenses" required />
+    </div>
+
+    <!-- Items Field -->
+    <div class="mb-5">
+      <label for="items" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Items</label>
+      <textarea rows="5" id="items" formControlName="items" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Enter items" required></textarea>
     </div>
 
     <!-- Submit Button -->
     <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
   </form>
-
-
-
 </app-layout>
