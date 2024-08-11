@@ -22,6 +22,6 @@ export class AuthService {
    */
   login(data: any) {
     const url = this.api_url + 'auth/login';
-    return this.http.post(url, {data} );
+    return this.http.post(url, data );
   }
 }
