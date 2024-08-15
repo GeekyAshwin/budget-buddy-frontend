@@ -1,3 +1,72 @@
 <app-layout>
-  hello
+  <div *ngIf="data" class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 px-5">
+    <!-- Card 1 -->
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div class="p-5">
+
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Allocated Budget: {{ data.monthlyBudget }}</h5>
+
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+
+        <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
+
+      <div class="p-5">
+
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Remaining Amount: {{ data.remainingBudget }}</h5>
+
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+
+        <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
+
+      <div class="p-5">
+
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Total Expense: {{ data?.totalExpense }}</h5>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 p-5">
+    <!-- Card 1 -->
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div class="p-5">
+
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Total Personal Expense: {{ data?.totalPersonalExpense }}</h5>
+
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+
+        <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
+
+      <div class="p-5">
+
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> Total Snacks Expense: {{ data?.totalSnacksExpense }}</h5>
+
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+
+        <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
+
+      <div class="p-5">
+
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Total Food Expense: {{ data?.totalFoodExpense }}</h5>
+
+      </div>
+    </div>
+  </div>
+
 </app-layout>
