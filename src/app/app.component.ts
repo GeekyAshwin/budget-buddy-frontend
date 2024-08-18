@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Router, RouterOutlet} from '@angular/router';
 import {SwPush} from "@angular/service-worker";
 import {error} from "@angular/compiler-cli/src/transformers/util";
 import Environment from "../environments/environment";
@@ -13,11 +13,11 @@ import Environment from "../environments/environment";
 })
 export class AppComponent implements OnInit{
   title = 'budget-buddy-frontend';
-  constructor(private swPush: SwPush) {
+  constructor(private swPush: SwPush, private router: Router) {
   }
   ngOnInit() {
+    // this.router.navigate(['/dashboard']);
     this.requestNotificationPermission()
-
   }
 
 

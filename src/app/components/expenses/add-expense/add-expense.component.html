@@ -12,6 +12,15 @@
       <input type="number" id="foodAndHomeUtilities" formControlName="foodAndHomeUtilities" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Enter expense for food and home utilities" required />
     </div>
 
+    <!-- Expense added by Field -->
+    <div class="mb-5">
+      <label for="foodAndHomeUtilities" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Expense Added By</label>
+      <select formControlName="userId"  class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light">
+        <option *ngFor="let user of users;" value="{{ user._id }}">{{ user?.username}}</option>
+      </select>
+
+    </div>
+
     <!-- Personal Expense Field -->
     <div class="mb-5">
       <label for="personalExpense" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Personal Expense</label>
