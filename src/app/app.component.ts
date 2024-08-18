@@ -24,11 +24,8 @@ export class AppComponent implements OnInit{
   requestNotificationPermission() {
     this.swPush.requestSubscription({
       serverPublicKey: Environment.SERVER_PUBLIC_KEY
-    }).then((data) => {
-      console.log(data)
-    }).catch((error) => {
-      console.error(error)
-    })
+    }).then(data => console.log(JSON.stringify(data)))
+      .catch(error => console.error(error))
 
   }
 }
